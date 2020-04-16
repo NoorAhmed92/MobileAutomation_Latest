@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [parallel]">
+  <parameter name="platformVersion" value="5.1.1"/>
+  <parameter name="platformName" value="ANDROID"/>
+  <parameter name="deviceName" value="Noor"/>
+  <parameter name="UDID" value="290732dc7d42"/>
+  <parameter name="url" value="http://0.0.0.0:4723/wd/hub"/>
+  <test name="Device-1(failed)">
+    <parameter name="platformVersion" value="5.1.1"/>
+    <parameter name="platformName" value="ANDROID"/>
+    <parameter name="deviceName" value="Noor"/>
+    <parameter name="UDID" value="290732dc7d42"/>
+    <parameter name="url" value="http://0.0.0.0:4723/wd/hub"/>
+    <classes>
+      <class name="TestScripts.Test1">
+        <methods>
+          <include name="setup"/>
+          <include name="searchForTV"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestScripts.Test1 -->
+    </classes>
+  </test> <!-- Device-1(failed) -->
+</suite> <!-- Failed suite [parallel] -->

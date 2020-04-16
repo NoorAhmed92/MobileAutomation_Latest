@@ -1,0 +1,14 @@
+<suite name="parallel">
+    <test name="Device-1">
+        <parameter name="deviceName" value="Noor" />
+        <parameter name="UDID" value="290732dc7d42" />
+        <parameter name="platformVersion" value="5.1.1" />
+        <parameter name ="platformName" value="ANDROID" />
+        <parameter name="url" value="http://0.0.0.0:4723/wd/hub" />
+
+
+        <classes>
+            <class name="TestScripts.Test1"/>
+        </classes>
+    </test>
+</suite>
