@@ -76,17 +76,20 @@ public class ProductPage extends BasePOMpage{
 
         ds.swipeScreen(driver);
         DriverSetup.waitForElement(driver,10,addToCartBtn);
-         if(addToCartBtn.isDisplayed()){
-            addToCartBtn.click();
-             ds.takeScreenshot(driver);
-        }else if(buyOption.isDisplayed()){
-            buyOption.click();
-             ds.takeScreenshot(driver);
-            addToCart();
-             ds.takeScreenshot(driver);
+        try {
+            if (addToCartBtn.isDisplayed()) {
+                addToCartBtn.click();
+                ds.takeScreenshot(driver);
+            }
+        }catch(Exception ex) {
+                buyOption.click();
+                ds.takeScreenshot(driver);
+                addToCart();
+                ds.takeScreenshot(driver);
 
-         }
-    }
+        }
+        }
+
     //This method used to add product to cart
     public void addToCart() throws InterruptedException {
         DriverSetup.waitForElement(driver,10,addToCart);
@@ -123,17 +126,19 @@ public class ProductPage extends BasePOMpage{
         cp = new CheckOutPage(driver);
         cp.setClickOnDeliverButton();
         DriverSetup.waitForElement(driver,10,clickOnContinue);
-        if(clickOnContinue.isDisplayed()){
-            ds.takeScreenshot(driver);
-            clickOnContinueBtn();
-            String s2 = cp.getProductData();
-            System.out.println(s2);
-            if (s1.equals(s2)) {
-                System.out.println("Pass: Product description matched with checkout page product");
-            } else {
-                System.out.println("Fail: Product description didn't matched with checkout page product");
+        try {
+            if (clickOnContinue.isDisplayed()) {
+                ds.takeScreenshot(driver);
+                clickOnContinueBtn();
+                String s2 = cp.getProductData();
+                System.out.println(s2);
+                if (s1.equals(s2)) {
+                    System.out.println("Pass: Product description matched with checkout page product");
+                } else {
+                    System.out.println("Fail: Product description didn't matched with checkout page product");
+                }
             }
-       }else
+        }catch(Exception ex)
         {
            System.out.println("Fail: no product data on checkout page ");
 

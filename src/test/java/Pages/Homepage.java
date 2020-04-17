@@ -61,14 +61,16 @@ public class Homepage extends BasePOMpage {
     public void clickOnMenu() throws InterruptedException {
         DriverSetup.waitForElement(driver,10,menuIcon);
         ds = new DriverSetup();
-        if (!menuIcon.isDisplayed()) {
-            clickOnEnglish();
-            clickOnSave();
+        try {
+            if (!menuIcon.isDisplayed()) {
+                clickOnEnglish();
+                clickOnSave();
+                ds.takeScreenshot(driver);
+            }
+        }catch (Exception ex) {
+            menuIcon.click();
             ds.takeScreenshot(driver);
         }
-        menuIcon.click();
-        ds.takeScreenshot(driver);
-
     }
     //This method used to click on Setting Element
     public void clickOnSetting() throws InterruptedException {
