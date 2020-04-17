@@ -12,7 +12,7 @@ import Config.*;
 public class Homepage extends BasePOMpage {
     private DriverSetup ds;
 
-    @AndroidFindBy(xpath ="//android.widget.RelativeLayout[@index='0']/android.widget.FrameLayout[@index='0']")
+    @AndroidFindBy(xpath ="//android.widget.ImageView[contains(@resource-id,'com.amazon.mShop.android.shopping:id/chrome_action_bar_burger_icon')]")
     private AndroidElement menuIcon;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'Settings')]")
@@ -21,13 +21,13 @@ public class Homepage extends BasePOMpage {
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'Country & Language')]")
     private AndroidElement clickOnCountry;
 
-    @AndroidFindBy(xpath = "//android.view.View[@index='2']")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Country/Region: Australia']")
     private AndroidElement clickOnCountryRegion;
 
-    @AndroidFindBy(xpath ="//android.widget.RadioButton[@index='4']")
+    @AndroidFindBy(xpath ="//android.widget.RadioButton[contains(@resource-id,'pref-option-group-primary-opt-0']")
     private AndroidElement clickOnAustralia;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@index='0']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Done']")
     private AndroidElement clickOnDoneBtn;
 
     @AndroidFindBy(xpath = "//android.widget.RadioButton[@content-desc='English - EN']")

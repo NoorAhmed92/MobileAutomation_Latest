@@ -20,7 +20,7 @@ public class LoginPage extends BasePOMpage{
     @AndroidFindBy(xpath="//android.widget.EditText[contains(@text='Amazon password')]")
     private AndroidElement passwordTxt;
 
-    @AndroidFindBy(xpath= "//android.widget.Button[@resource-id='signInSubmit']")
+    @AndroidFindBy(xpath= "//android.widget.Button[contains(@resource-id,'signInSubmit')]")
     private  AndroidElement loginBtn;
 
     @AndroidFindBy(xpath="//android.widget.Button[contains(@text='Already a customer? Sign in')]")
@@ -29,7 +29,7 @@ public class LoginPage extends BasePOMpage{
     @AndroidFindBy(xpath = "//android.widget.EditText[contains(@text,'ap_ra_email_or_phone')]")
     private AndroidElement emailIdTxt;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@resource-id='continue']")
+    @AndroidFindBy(xpath = "//android.widget.Button[contains(@resource-id,'continue')]")
     private AndroidElement continueBtn;
 
 
