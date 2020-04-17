@@ -117,7 +117,9 @@ public class ProductPage extends BasePOMpage{
         clickOnTv();
         String s1 = getDescriptionOfItem();
         System.out.println(s1);
-        checkOutProduct();
+        clickOnBuyOption();
+        clickOnBasket();
+        clickOnCheckout();
         cp = new CheckOutPage(driver);
         cp.setClickOnDeliverButton();
         DriverSetup.waitForElement(driver,10,clickOnContinue);
@@ -140,12 +142,5 @@ public class ProductPage extends BasePOMpage{
         return null;
 
     }
-    //This method used to click an addtocart button and proceed for checkout
-    public String checkOutProduct() throws InterruptedException {
-        clickOnBuyOption();
-        //addToCart();
-        clickOnBasket();
-        clickOnCheckout();
-        return null;
-    }
+
 }
