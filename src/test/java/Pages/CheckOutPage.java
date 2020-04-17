@@ -11,7 +11,7 @@ import Config.*;
 public class CheckOutPage extends BasePOMpage {
     private DriverSetup ds;
 
-    @AndroidFindBy(xpath="//android.view.View[@index='1']/android.view.View[@index='1']")
+    @AndroidFindBy(xpath="//android.widget.Button[contains(@resource-id,'a-autoid-0-announce')]")
     private AndroidElement clickOnDeliverBtn;
 
     @AndroidFindBy(xpath="//android.view.View[@index='0']/android.widget.ListView[@index='1']")

@@ -17,13 +17,13 @@ public class LoginPage extends BasePOMpage{
         PageFactory.initElements(new AppiumFieldDecorator(this.driver), this);
     }
 
-    @AndroidFindBy(xpath="//android.widget.EditText[contains(@text='Amazon password')]")
+    @AndroidFindBy(xpath="//android.widget.EditText[contains(@resource-id,'ap_password')]")
     private AndroidElement passwordTxt;
 
     @AndroidFindBy(xpath= "//android.widget.Button[contains(@resource-id,'signInSubmit')]")
     private  AndroidElement loginBtn;
 
-    @AndroidFindBy(xpath="//android.widget.Button[contains(@text='Already a customer? Sign in')]")
+    @AndroidFindBy(xpath="//android.widget.Button[contains(@resource-id,'com.amazon.mShop.android.shopping:id/sign_in_button')]")
     public AndroidElement signInButton;
 
     @AndroidFindBy(xpath = "//android.widget.EditText[contains(@text,'ap_ra_email_or_phone')]")

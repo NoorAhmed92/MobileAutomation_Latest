@@ -26,13 +26,13 @@ public class ProductPage extends BasePOMpage{
     @AndroidFindBy(xpath ="//android.widget.Button[@content-desc='See All Buying Options See All Buying Options']")
     private AndroidElement buyOption;
 
-    @AndroidFindBy(xpath ="//android.view.View[@index='7']")
+    @AndroidFindBy(xpath ="//android.widget.Button[@content-desc,'Add to cart  Add to cart']")
     private AndroidElement addToCart;
 
-    @AndroidFindBy(xpath="//android.widget.TextView[@index='1']")
+    @AndroidFindBy(xpath="//android.widget.TextView[contains(@resource-id,'com.amazon.mShop.android.shopping:id/chrome_action_bar_cart_count')]")
     private AndroidElement clickOnCart;
 
-    @AndroidFindBy(xpath="//android.widget.Button[@index='0']")
+    @AndroidFindBy(xpath="//android.widget.Button[contains(@resource-id,'a-autoid-1-announce']")
     private AndroidElement proceedToCheckout;
 
     @AndroidFindBy(xpath="//android.widget.Button[contains(@resource-id,'add-to-cart-button')]")
